@@ -1,0 +1,33 @@
+/**
+ * @param {number[]} arr
+ * @param {Function} fn
+ * @return {number[]}
+ */
+var map = function(arr, fn) {
+    new_arr = [];
+    for(index=0; index < arr.length; index++)
+        new_arr[index] = fn(arr[index], index);
+    return new_arr
+};
+
+/**  without any container a.k.a Inmemory transformations,  It can result in unexpected problems
+var map = function(arr, fn) {
+    for (let i = 0; i < arr.length; ++i) {
+        arr[i] = fn(arr[i], i);
+    }
+    return arr;
+};
+*/
+
+/** Using the forEach
+  arr.forEach((element, index) => {
+    transformedArr[index] = fn(element, index);
+  });
+*/
+
+/** forEach vs. Reduce
+You should use `map`, `reduce` and `filter` when it makes sense for the manipulation you wish to perform, 
+and forEach when it doesn't really make sense to use any of the others (e.g. when you don't need a transformed output array). All are roughly similarly performant.
+Fall back to naked for `loops` when you need to do non trivial iteration, when performance is absolutely critical, or when you need the ability to short circuit the loop.
+source: https://www.reddit.com/r/javascript/comments/40mgzm/foreach_vs_reduce/?rdt=53443
+*/
