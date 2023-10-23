@@ -22,4 +22,5 @@ var createCounter = function(init) {
 /** When, Where and How to use the arrow function syntax!!
 Arrow function has lexical this binding i.e they inherit the this value of the enclosing scope. 
 This can be particularly useful when working with event listeners or callback functions, where the this value can be unpredictable.
+source:https://leetcode.com/problems/create-hello-world-function/solutions/3486895/DAY(O(1))-Why-you-should-prefer-arrow-function-syntax!/
 */
