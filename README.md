@@ -1,5 +1,5 @@
 # 30-Days-of-JavaScript-Challenge
-[30 Days of JavaScript Challenge]([https://markmap.js.org/repl](https://leetcode.com/discuss/study-guide/3458761/))
+[30 Days of JavaScript Challenge](https://leetcode.com/discuss/study-guide/3458761/)
 
 ## Problems
 - [1.2667. Create Hello World Function](1.2667.CreateHelloWorldFunction.js)
