@@ -1,0 +1,25 @@
+/**
+ * @param {integer} init
+ * @return { increment: Function, decrement: Function, reset: Function }
+ */
+var createCounter = function(init) {
+    var val = init;
+
+    return {
+        increment: ()=> ++val, 
+        decrement: ()=> --val, 
+        reset: ()=> val = init
+    }
+};
+
+/**
+ * const counter = createCounter(5)
+ * counter.increment(); // 6
+ * counter.reset(); // 5
+ * counter.decrement(); // 4
+ */
+
+/** When, Where and How to use the arrow function syntax!!
+Arrow function has lexical this binding i.e they inherit the this value of the enclosing scope. 
+This can be particularly useful when working with event listeners or callback functions, where the this value can be unpredictable.
+*/
