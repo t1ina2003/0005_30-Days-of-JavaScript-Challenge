@@ -1,0 +1,32 @@
+/**
+ * @param {number} n
+ * @return {Function} counter
+ */
+var createCounter = function(n) {
+        var m = 0;
+    return function() {
+        return n+(m++);
+    };
+};
+
+/** 
+ * const counter = createCounter(10)
+ * counter() // 10
+ * counter() // 11
+ * counter() // 12
+ */
+
+/** Closures Versus Classes
+- closures allow for true encapsulation
+In the class example, there is nothing stopping you from writing addTo2.a = 3;
+in the closure example, it is theoretically impossible to access a
+- how the functions are stored in memory
+a class, each instance stores a single reference to the prototype object where all the methods are stored.
+for closures, all the "methods" are generated and a "copy" of each is stored in memory each time the outer function is called.
+*/
+
+/** reduce the amount of code with an implicit return.
+var createCounter = function(n) {
+  return () => n++;
+};
+*/
